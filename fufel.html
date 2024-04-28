@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEAR Wallet - mine HOT</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3e7;
+    margin: 0;
+    padding: 0;
+  }
+  .wallet-container {
+    max-width: 400px;
+    margin: auto;
+    background-color: #fff5e6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .balance {
+    background-color: #ffce00;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #fff5e6;
+  }
+  .button {
+    background-color: #ffcc00;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .transactions {
+    background-color: #fff5e6;
+    padding: 20px;
+  }
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .transaction:last-child {
+    margin-bottom: 0;
+  }
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table td, .table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .table tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  /* Стили для мини-игры */
+  .game-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff5e6;
+  }
+  .score {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="wallet-container">
+  <!-- Balance -->
+  <div class="balance">
+    Total Balance:<br> $<span id="totalBalance">0.02</span>
+  </div>
+
+  <!-- Actions -->
+  <div class="actions">
+    <button class="button" id="swapButton">Swap</button>
+    <button class="button" id="transferButton">Transfer</button>
+  </div>
+
+  <!-- Transactions -->
+  <div class="transactions">
+    <div>Recent transactions</div>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+      <tr>
+        <td>12_claim</td>
+        <td>-0 HOT</td>
+        <td>Apr 23, 18:19:58</td>
+      </tr>
+      <!-- Дополнительные транзакции -->
+    </table>
+  </div>
+
+  <!-- Mini-game -->
+  <div class="game-container">
+    <div class="score">Score: <span id="gameScore">0</span></div>
+    <button class="button" id="gameButton">Collect Points</button>
+  </div>
+</div>
+
+<script>
+  // JavaScript для интерактивности кнопок и мини-игры
+  document.getElementById('swapButton').addEventListener('click', function() {
+    alert('Функция Swap еще не реализована.');
+  });
+
+  document.getElementById('transferButton').addEventListener('click', function() {
+    alert('Функция Transfer еще не реализована.');
+  });
+
+  // Мини-игра
+  let score = 0;
+  document.getElementById('gameButton').addEventListener('click', function() {
+    score++;
+    document.getElementById('gameScore').textContent = score;
+  });
+</script>
+
+</body>
+</html>
