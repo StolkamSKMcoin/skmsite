@@ -131,9 +131,10 @@
 
   // Мини-игра
   let score = 0;
+  let halv = 1;
   document.getElementById('gameButton').addEventListener('click', function() {
-    if (score<100) score++;
-    else score+=0.5;
+    score+=(1/halv);
+    if ((score+1)%100 == 0) halv++;
     
     
     document.getElementById('gameScore').textContent = score;
